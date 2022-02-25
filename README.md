@@ -6,3 +6,4 @@
 3. Реплика 1:ENCFF001FLG и Реплика 2: ENCFF001FLD	(ссылка https://www.encodeproject.org/experiments/ENCSR000DUA/)
 4. Контроль: ENCFF001HNS (ссылка https://www.encodeproject.org/experiments/ENCSR000DTX/)
 
+Ссылка на колаб:  https://colab.research.google.com/drive/1YMGGqUXh61EeqcmM9m9oUDH5X563qU3X?usp=sharing
