@@ -7,3 +7,5 @@
 4. Контроль: ENCFF001HNS (ссылка https://www.encodeproject.org/experiments/ENCSR000DTX/)
 
 Ссылка на колаб:  https://colab.research.google.com/drive/1YMGGqUXh61EeqcmM9m9oUDH5X563qU3X?usp=sharing
+
+###Анализ fastqc
