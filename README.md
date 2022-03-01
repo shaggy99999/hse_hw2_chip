@@ -99,8 +99,8 @@ A:
 
 
 <p float="left">
-  <img src="/images/v1.png" width="400" />
-  <img src="/images/v2.png" width="400" />
+  <img src="/image/v1.png" width="400" />
+  <img src="/image/v2.png" width="400" />
 </p>
 
 ```
