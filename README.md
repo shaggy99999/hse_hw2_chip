@@ -13,7 +13,12 @@
 
 ## 1. Анализ Fastq
 
-Для первой реплики ENCFF001FLG подрезания чтений улучшили картину.:
+Для того, чтобы правильно подгтотвить файлы и выяснить, нужно ли их обрабатывать дополнительно, посмотрим на отчет fastqc.
+
+ 1) ENCFF001FLG
+Исходя из отчета fastqc, я бы сказала, что нужно дополнительно обрабатывать чтения. Рассмотрим подробнее некоторые ключевые графики.
+
+Несмотря на то, что Per Tile Sequence Quality отмечен как непрошедший проверку качества график, основное полотно синего цвета, который свидетельствует о хорошем качестве для tiles, посмотрим какой будет результат после подрезаний чтений:
 
 до подрезания чтений:
 
@@ -23,53 +28,54 @@
   <img src="/image/3.png" width="400" />
   <img src="/image/4.png" width="400" />
 </p>
-
+Для первой реплики ENCFF001FLG подрезания чтений улучшили картину.
 после подрезания чтений:
 
 <p float="left">
-  <img src="/image/5.png" width="250" />
-  <img src="/image/6.png" width="250" />
-  <img src="/image/7.png" width="250" />
-  <img src="/image/8.png" width="250" />
+  <img src="/image/5.png" width="400" />
+  <img src="/image/6.png" width="400" />
+  <img src="/image/7.png" width="400" />
+  <img src="/image/8.png" width="400" />
 </p>
 
-После был сделан fastqc для ENCFF001FLD
-
-Очевидно, что подрезания улучшили картину.
+ 2) ENCFF001FLD
+После был проанализирован fastqc для ENCFF001FLD. Ситуация аналогична первого пункту и подрезания чтений совсем немного улучшает качество Per Tile Sequence Quality.
 
 до:
 
 <p float="left">
-  <img src="/pictures/9.png" width="250" />
-  <img src="/pictures/10.png" width="250" />
-  <img src="/pictures/11.png" width="250" />
-  <img src="/pictures/12.png" width="250" />
+  <img src="/image/9.png" width="400" />
+  <img src="/image/10.png" width="400" />
+  <img src="/image/11.png" width="400" />
+  <img src="/image/12.png" width="400" />
 </p>
 
 после:
 
 <p float="left">
-  <img src="/pictures/13.png" width="250" />
-  <img src="/pictures/14.png" width="250" />
-  <img src="/pictures/15.png" width="250" />
-  <img src="/pictures/16.png" width="250" />
+  <img src="/image/13.png" width="400" />
+  <img src="/image/14.png" width="400" />
+  <img src="/image/15.png" width="400" />
+  <img src="/image/16.png" width="400" />
 </p>
 
-Для файла контроля ENCFF001HNS также подрезали чтения(в принципе можно было не делать):
+Для файла контроля ENCFF001HNS также подрезали чтения(в принципе можно было не делать, тк для контроля отчет изначально был лучше, чем для реплик):
 до:
 <p float="left">
-  <img src="/pictures/17.png" width="250" />
-  <img src="/pictures/18.png" width="250" />
-  <img src="/pictures/19.png" width="250" />
-  <img src="/pictures/20.png" width="250" />
+  <img src="/image/17.png" width="400" />
+  <img src="/image/18.png" width="400" />
+  <img src="/image/19.png" width="400" />
+  <img src="/image/20.png" width="400" />
 </p>
 после:
 <p float="left">
-  <img src="/pictures/21.png" width="250" />
-  <img src="/pictures/22.png" width="250" />
-  <img src="/pictures/23.png" width="250" />
-  <img src="/pictures/24.png" width="250" />
+  <img src="/image/21.png" width="400" />
+  <img src="/image/22.png" width="400" />
+  <img src="/image/23.png" width="400" />
+  <img src="/image/24.png" width="400" />
 </p>
+
+Вывод: качество образцов допустимо для дальнейшей обработки
 ## Выравнивание на хромосому
 
 Таблица со статистикой по каждому из 3 образцов:
@@ -77,7 +83,7 @@
 |------------------------|------------------|-------------------|-----------------------|------------------|
 |ENCFF001FLG (реплика 1) |   30895722       | 28027119 (90.72%) | 1174449 (3.80%)       | 1694154 (5.48%)  |
 |ENCFF001FLD (реплика 2) |   14724307       | 12642731 (85.86%) | 804266 (5.46%)        | 1277310 (8.67%)  |
-|ENCFF001HNS (контроль)  |                  |                   |                       |                  |
+|ENCFF001HNS (контроль)  |   18602597       | 14838049 (79.76%) | 1070793 (5.76%)       | 2693755 (14.48%) |
  
 
 ```
@@ -91,12 +97,11 @@ A:
 
 
 <p float="left">
-  <img src="/pictures/v1.png" width="400" />
-  <img src="/pictures/v2.png" width="400" />
+  <img src="/images/v1.png" width="400" />
+  <img src="/images/v2.png" width="400" />
 </p>
 
 ```
 Q: Как можно объяснить различия в количестве пересечений?
-A: Различия появляются, потому что сначала мы накладываем одни участки на другие, 
-а потом вторые на первые... 
+A: 
 ```
