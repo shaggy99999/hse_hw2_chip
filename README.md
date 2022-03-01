@@ -18,10 +18,10 @@
 до подрезания чтений:
 
 <p float="left">
-  <img src="/image/1.png" width="250" />
-  <img src="/image/2.png" width="250" />
-  <img src="/image/3.png" width="250" />
-  <img src="/image/4.png" width="250" />
+  <img src="/image/1.png" width="300" />
+  <img src="/image/2.png" width="300" />
+  <img src="/image/3.png" width="300" />
+  <img src="/image/4.png" width="300" />
 </p>
 
 после подрезания чтений:
